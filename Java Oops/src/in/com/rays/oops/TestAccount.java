@@ -1,4 +1,4 @@
-package in.com.rays.oops;
+package in.com.rays.oops.Encapsulation;
 
 public class TestAccount {
 	
@@ -13,20 +13,25 @@ public class TestAccount {
 		System.out.println("a1 Account Number :" + a1.getNumber());
 		System.out.println("a1 Account Type : " + a1.getAccountType());
 		System.out.println("a1 Account Balance :" + a1.getBalance());
+		a1.deposit(1000);
+		a1.Withdrawal(500);
 		
 		System.out.println();
-		System.out.println("---------------------");
+		System.out.println("-------------");
 		System.out.println();
+        Account a2 =  new Account() ;
 		
-		Account a2 = new Account();
+		a2.setNumber("125443212568462");
+		a2.setAccountType("Current");
+		a2.setBalance(10000);
 		
-		a2.setNumber("829651352045");
-		a2.setAccountType("Saving");
-		a2.setBalance(12568);
+		System.out.println("a1 Account Number :" + a2.getNumber());
+		System.out.println("a1 Account Type : " + a2.getAccountType());
+		System.out.println("a1 Account Balance :" + a2.getBalance());
 		
-		System.out.println("a2 Account Number :" + a2.getNumber());
-		System.out.println("a2 Account Type : " + a2.getAccountType());
-		System.out.println("a2 Account Balance :" + a2.getBalance());
+		a2.deposit(1000);
+		a2.Withdrawal(2000);
+		a1.fundTransfer(a2, 2000);
 		
 	}
 
